@@ -15,7 +15,7 @@ public class Main {
                 // Determine W based on the file name
                 int W = determineCapacity(filename);
 
-                // Measure Knapsack execution time
+                // Measure DP execution time
                 long knapsackStart = System.nanoTime();
                 System.gc();
                 System.gc();
@@ -38,7 +38,7 @@ public class Main {
                 // Restore the dataset for ShellSort
                 weightsAndValues = readDataset(filename);
 
-                // Measure randomizedShellSort execution time and memory usage
+                // Measure BnB execution time and memory usage
                 List<BranchandBound.Item> items = new ArrayList<>();
                 for (int i = 0; i < values.length; i++) {
                     items.add(new BranchandBound.Item(values[i], weights[i]));
